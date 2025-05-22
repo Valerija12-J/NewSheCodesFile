@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yoga</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* General Styles */
+      body {
+        font-family: "Lora", serif;
+        background-color: rgb(155, 195, 199); /* Light blueish theme */
+        color: black;
+        transition: background-color 0.3s, color 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .dark-theme {
+        background-color: rgb(105, 117, 105); /* Dark greenish theme */
+        color: rgb(200, 200, 200);
+      }
+
+      h1,
+      h2,
+      p,
+      footer,
+      a {
+        color: inherit;
+        transition: color 0.3s;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 40px;
+        margin-bottom: 5px;
+      }
+
+      h2 {
+        font-size: 30px;
+        margin-top: 0;
+        font-weight: 300;
+      }
+
+      /* Yoga Content Container */
+      .telo {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: rgb(142, 159, 161);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: background-color 0.3s;
+      }
+
+      .dark-theme .telo {
+        background-color: rgb(55, 90, 75);
+        border: 1px solid rgb(100, 150, 100);
+      }
+
+      /* Button Styling */
+      button {
+        background: linear-gradient(45deg, rgb(100, 100, 100), rgb(50, 50, 50));
+        color: rgb(200, 200, 200);
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        background: linear-gradient(
+          45deg,
+          rgb(150, 150, 150),
+          rgb(100, 100, 100)
+        );
+        transform: translateY(-2px);
+      }
+
+      .dark-theme button {
+        background: rgb(85, 107, 47);
+        color: rgb(200, 200, 200);
+        border: 2px solid rgb(200, 200, 200);
+      }
+
+      .dark-theme button:hover {
+        background: rgb(60, 179, 113);
+        color: rgb(50, 50, 50);
+      }
+
+      /* Image Styling */
+      .yogaImage1 {
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.5s ease-in-out, box-shadow 0.5s;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 10px;
+      }
+
+      .yogaImage1:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        font-size: 16px;
+        margin: 20px 0;
+        transition: color 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="themeToggle">Change theme</button>
+
+    <div class="telo">
+      <h1>Yoga</h1>
+      <h2>My favorite hobby</h2>
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/158/515/original/d628bd7dbef61238f3add2044febb175-9327710-1600x900.jpg?1740327287"
+        alt="Yoga Image 1"
+        class="yogaImage1"
+      />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/158/514/original/Yoga-in-Nature1.jpg?1740327276"
+        alt="Yoga Image 2"
+        class="yogaImage1"
+      />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/158/516/original/woman-yoga-nature-seated-twist.jpg?1740327305"
+        alt="Yoga Image 3"
+        class="yogaImage1"
+      />
+
+      <p>
+        Yoga is an ancient practice that harmonizes the body, mind, and spirit
+        through physical postures, breath control, and meditation. It enhances
+        flexibility, strength, and balance while also promoting relaxation and
+        reducing stress. Rooted in mindfulness, yoga encourages self-awareness
+        and inner peace, helping individuals connect with themselves on a deeper
+        level. With various styles like Hatha for gentle movement, Vinyasa for
+        dynamic flow, and Ashtanga for structured discipline, it offers
+        something for everyone. More than just exercise, yoga is a holistic
+        practice that fosters overall well-being and a balanced lifestyle.
+      </p>
+
+      <button id="learnMoreButton">Learn more about yoga 🧘🏻‍♀️</button>
+    </div>
+
+    <footer>
+      Coded by
+      <a
+        href="https://www.linkedin.com/in/valerija-jovanovska-0105971aa/"
+        target="_blank"
+        >Valerija Jovanovska</a
+      >
+    </footer>
+
+    <script>
+      document
+        .getElementById("themeToggle")
+        .addEventListener("click", function () {
+          document.body.classList.toggle("dark-theme");
+        });
+
+      document
+        .getElementById("learnMoreButton")
+        .addEventListener("click", function () {
+          window.open("https://en.wikipedia.org/wiki/Yoga", "_blank");
+        });
+    </script>
+  </body>
+</html>
